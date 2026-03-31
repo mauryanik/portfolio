@@ -4,7 +4,7 @@ import { experiences } from '../data/portfolioData'
 import type { Experience } from '../types'
 import styles from './Experience.module.css'
 
-const ExpCard: React.FC<{ exp: Experience; index: number }> = ({ exp, index }) => {
+const ExpCard: React.FC<{ exp: Experience }> = ({ exp }) => {
   const ref = useScrollFade<HTMLDivElement>()
   return (
     <div
@@ -44,8 +44,8 @@ const Experience: React.FC = () => {
         <h2 className="section-title">Work <em>Experience</em></h2>
         <div className="divider divider-blue" />
         <div className={styles.list}>
-          {experiences.map((exp, i) => (
-            <ExpCard key={exp.id} exp={exp} index={i} />
+          {experiences.map((exp) => (
+            <ExpCard key={exp.id} exp={exp}  />
           ))}
         </div>
       </div>
