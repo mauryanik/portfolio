@@ -1,0 +1,175 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 3rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  pointer-events: none;
+  animation: drift 12s ease-in-out infinite alternate;
+}
+.blob1 { width: 600px; height: 600px; background: var(--c1); top: -120px; right: -120px; animation-delay: 0s; }
+.blob2 { width: 400px; height: 400px; background: var(--c4); bottom: -60px; left: -80px; animation-delay: -3s; }
+.blob3 { width: 320px; height: 320px; background: var(--c3); top: 50%; right: 22%; animation-delay: -6s; }
+.blob4 { width: 200px; height: 200px; background: var(--c5); top: 20%; left: 30%; animation-delay: -9s; }
+
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(24px, -24px) scale(1.06); }
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+}
+
+/* TAG */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--c3);
+  border: 1px solid rgba(6, 214, 160, 0.3);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.7s ease both;
+}
+
+.tagDot {
+  width: 7px;
+  height: 7px;
+  background: var(--c3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* HEADING */
+.heading {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  line-height: 1.04;
+  letter-spacing: -2.5px;
+  margin-bottom: 0.5rem;
+  animation: fadeUp 0.7s 0.1s ease both;
+}
+
+.nameLine { display: block; }
+.accent { color: var(--c1); }
+
+.role {
+  font-family: var(--font-head);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--muted);
+  font-weight: 400;
+  margin-bottom: 1.75rem;
+  animation: fadeUp 0.7s 0.15s ease both;
+}
+
+.roleAccent { color: var(--c2); font-weight: 700; }
+
+.desc {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+
+.highlight { color: var(--text); font-weight: 500; }
+
+.btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.25s ease both;
+}
+
+/* CARD */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  min-width: 230px;
+  animation: fadeUp 0.7s 0.3s ease both;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--c1), var(--c5));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 auto 1.25rem;
+}
+
+.cardName {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.cardTitle {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.badges { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .hero { padding: 7rem 1.5rem 4rem; }
+  .inner { grid-template-columns: 1fr; }
+  .card { display: none; }
+}

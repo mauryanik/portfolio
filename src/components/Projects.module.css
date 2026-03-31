@@ -1,0 +1,83 @@
+.bg { background: var(--surface); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1.75rem;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.card:hover { transform: translateY(-7px); }
+
+.card-red:hover   { border-color: rgba(255,77,109,0.4);  box-shadow: 0 16px 50px rgba(255,77,109,0.1); }
+.card-green:hover { border-color: rgba(6,214,160,0.4);   box-shadow: 0 16px 50px rgba(6,214,160,0.1); }
+.card-blue:hover  { border-color: rgba(76,201,240,0.4);  box-shadow: 0 16px 50px rgba(76,201,240,0.1); }
+
+.banner {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-red   { background: radial-gradient(circle at 70% 30%, rgba(255,77,109,0.25) 0%, transparent 70%), var(--surface2); }
+.banner-green { background: radial-gradient(circle at 30% 70%, rgba(6,214,160,0.2) 0%, transparent 70%), var(--surface2); }
+.banner-blue  { background: radial-gradient(circle at 60% 40%, rgba(76,201,240,0.2) 0%, transparent 70%), var(--surface2); }
+
+.emoji { font-size: 3.5rem; }
+
+.body { padding: 1.5rem; }
+
+.name {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.links { display: flex; gap: 0.75rem; }
+
+.link {
+  font-size: 0.82rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  transition: all 0.2s;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.link:hover { border-color: var(--c1); color: var(--c1); }
+
+.primary {
+  background: var(--c1);
+  color: #fff !important;
+  border-color: var(--c1) !important;
+}
+.primary:hover { box-shadow: 0 4px 16px rgba(255,77,109,0.4); }
+
+.locked {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.6;
+  cursor: default;
+}
