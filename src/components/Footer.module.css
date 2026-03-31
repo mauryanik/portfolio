@@ -1,0 +1,15 @@
+.footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.accent { color: var(--c1); }
+.sub { font-size: 0.78rem; opacity: 0.7; }
+.react { color: var(--c3); }
+.ts { color: var(--c4); }

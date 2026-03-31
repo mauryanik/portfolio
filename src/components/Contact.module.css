@@ -1,0 +1,77 @@
+.section { position: relative; overflow: hidden; }
+
+.blob1 {
+  position: absolute; width: 420px; height: 420px;
+  background: var(--c5); border-radius: 50%;
+  filter: blur(110px); opacity: 0.1;
+  top: -100px; left: -100px; pointer-events: none;
+}
+.blob2 {
+  position: absolute; width: 320px; height: 320px;
+  background: var(--c1); border-radius: 50%;
+  filter: blur(110px); opacity: 0.09;
+  bottom: -80px; right: -80px; pointer-events: none;
+}
+
+.inner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.centered { text-align: center; }
+
+.dividerCenter { margin-left: auto; margin-right: auto; }
+
+.desc {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-full);
+  border: 1.5px dashed rgba(255,77,109,0.4);
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+  margin-bottom: 2.5rem;
+}
+.copyBtn:hover { border-color: var(--c1); color: var(--c1); }
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: all 0.25s;
+}
+.link:hover { transform: translateY(-3px); }
+
+.cl1:hover { border-color: var(--c1); color: var(--c1); box-shadow: 0 4px 20px rgba(255,77,109,0.18); }
+.cl2:hover { border-color: var(--c4); color: var(--c4); box-shadow: 0 4px 20px rgba(76,201,240,0.18); }
+.cl3:hover { border-color: var(--c3); color: var(--c3); box-shadow: 0 4px 20px rgba(6,214,160,0.18); }
+.cl4:hover { border-color: var(--c2); color: var(--c2); box-shadow: 0 4px 20px rgba(255,209,102,0.18); }
+
+.linkIcon { font-size: 1.1rem; }
